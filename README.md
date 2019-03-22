@@ -26,13 +26,10 @@ Requirements Software
 _Node.js, Karma and Jasmine are required for the npm commands to run. Must have Node.js installed. No servers are required for the running of this application._
 
 1. Clone this repository: $ git clone https://github.com/thearyim/JavaScript-Super-Galactic-Age-Calculator
-2. Change into the root directory in the terminal.
+2. Navigate to root project directory in the terminal.
 3. Input npm install into the terminal to install dependancies.
 4. Input npm run build to build the application.
 5. Input npm run start to start the application.
-6. Input npm test to test the application.
-
-To run the program on chrome, use these commands: $ cd ageCalculator $ dotnet run
 
 ## Known Bugs
 
