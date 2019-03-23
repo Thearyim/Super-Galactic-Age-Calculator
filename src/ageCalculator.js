@@ -2,8 +2,8 @@
 export default class AgeCalculator {
   constructor() {
     this.planets = ["earth", "mercury", "venus", "mars", "jupiter"];
-    this.ageFactors = [1, 0.24, 0.62, 1.88, 11.86];
-    this.lifeExpectancies = [78, 18.72, 48.36, 146.64, 925.08];
+    this.ageFactors = [1, 4.17, 1.61, 0.53, 0.084];
+    this.lifeExpectancies = [78, 325.26, 125.58, 41.34, 6.55];
     this.lifeStyleFactors = ["smoke", "drink", "exercise"];
   }
 

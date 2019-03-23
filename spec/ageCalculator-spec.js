@@ -14,7 +14,7 @@ describe('AgeCalculator', function() {
     var planet = "mercury";
     var ageOnEarth = 2;
 
-    expect(ageCalculator.calculateAge(ageOnEarth, planet)).toEqual(.48);
+    expect(ageCalculator.calculateAge(ageOnEarth, planet)).toEqual(8.34);
   });
 
   it('should return the correct age for the planet Venus', function() {
@@ -22,7 +22,7 @@ describe('AgeCalculator', function() {
     var planet = "venus";
     var ageOnEarth = 2;
 
-    expect(ageCalculator.calculateAge(ageOnEarth, planet)).toEqual(1.24);
+    expect(ageCalculator.calculateAge(ageOnEarth, planet)).toEqual(3.22);
   });
 
   it('should return the correct age for the planet Mars', function() {
@@ -30,7 +30,7 @@ describe('AgeCalculator', function() {
     var planet = "mars";
     var ageOnEarth = 2;
 
-    expect(ageCalculator.calculateAge(ageOnEarth, planet)).toEqual(3.76);
+    expect(ageCalculator.calculateAge(ageOnEarth, planet)).toEqual(1.06);
   });
 
   it('should return the correct age for the planet Jupiter', function() {
@@ -38,7 +38,7 @@ describe('AgeCalculator', function() {
     var planet = "jupiter";
     var ageOnEarth = 2;
 
-    expect(ageCalculator.calculateAge(ageOnEarth, planet)).toEqual(23.72);
+    expect(ageCalculator.calculateAge(ageOnEarth, planet)).toEqual(0.168);
   });
 
   it('should throw exception when determining age and an invalid planet is provided', function() {
@@ -59,28 +59,28 @@ describe('AgeCalculator', function() {
     var ageCalculator = new AgeCalculator();
     var planet = "mercury";
 
-    expect(ageCalculator.getLifeExpectancy(planet)).toEqual(18.72);
+    expect(ageCalculator.getLifeExpectancy(planet)).toEqual(325.26);
   });
 
   it('should return the correct life expectancy for the planet Venus', function() {
     var ageCalculator = new AgeCalculator();
     var planet = "venus";
 
-    expect(ageCalculator.getLifeExpectancy(planet)).toEqual(48.36);
+    expect(ageCalculator.getLifeExpectancy(planet)).toEqual(125.58);
   });
 
   it('should return the correct life expectancy for the planet Mars', function() {
     var ageCalculator = new AgeCalculator();
     var planet = "mars";
 
-    expect(ageCalculator.getLifeExpectancy(planet)).toEqual(146.64);
+    expect(ageCalculator.getLifeExpectancy(planet)).toEqual(41.34);
   });
 
   it('should return the correct life expectancy for the planet Jupiter', function() {
     var ageCalculator = new AgeCalculator();
     var planet = "jupiter";
 
-    expect(ageCalculator.getLifeExpectancy(planet)).toEqual(925.08);
+    expect(ageCalculator.getLifeExpectancy(planet)).toEqual(6.55);
   });
 
   it('should throw exception when determining life expectancy and an invalid planet is provided', function() {
@@ -96,5 +96,37 @@ describe('AgeCalculator', function() {
     var earthAge = 20;
 
     expect(ageCalculator.calculateLifeYearRemaining(earthAge, planet)).toEqual(78-20);
+  });
+
+  it('should return the correct life remaining for the person on the planet Mercury', function() {
+    var ageCalculator = new AgeCalculator();
+    var planet = "mercury";
+    var earthAge = 20;
+
+    expect(ageCalculator.calculateLifeYearRemaining(earthAge, planet)).toEqual(325.26 - (20 * 4.17));
+  });
+
+  it('should return the correct life remaining for the person on the planet Venus', function() {
+    var ageCalculator = new AgeCalculator();
+    var planet = "venus";
+    var earthAge = 20;
+
+    expect(ageCalculator.calculateLifeYearRemaining(earthAge, planet)).toEqual(125.58 - (20 * 1.61));
+  });
+
+  it('should return the correct life remaining for the person on the planet Mars', function() {
+    var ageCalculator = new AgeCalculator();
+    var planet = "mars";
+    var earthAge = 20;
+
+    expect(ageCalculator.calculateLifeYearRemaining(earthAge, planet)).toEqual(41.34 - (20 * 0.53));
+  });
+
+  it('should return the correct life remaining for the person on the planet Jupiter', function() {
+    var ageCalculator = new AgeCalculator();
+    var planet = "jupiter";
+    var earthAge = 20;
+
+    expect(ageCalculator.calculateLifeYearRemaining(earthAge, planet)).toEqual(6.55 - (20 * 0.084));
   });
 });
