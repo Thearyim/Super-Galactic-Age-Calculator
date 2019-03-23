@@ -18,7 +18,7 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'rpg',
+      title: 'Super-Galactic-Age-Calculator',
       template: './src/index.html',
       inject: 'body'
     })

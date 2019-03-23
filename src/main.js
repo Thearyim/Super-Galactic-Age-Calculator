@@ -1,6 +1,6 @@
-import $ from 'jquery';
-import AgeCalculator from './ageCalculator'
 
-$(document).ready(function() {
-  var newAge;
-});
+// import AgeCalculator from './ageCalculator'
+//
+// $(document).ready(function() {
+//
+//   });
