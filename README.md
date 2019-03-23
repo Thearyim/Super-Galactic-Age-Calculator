@@ -9,15 +9,14 @@ A solar year lasts 365 days on planet Earth. However, the length of a solar year
 
 ### Specs
 
-|| Behavior  | Input  | Output  |
-|---|---|---|---|
-
-|1.| Calculates user's age in Mercury years |  |  |
-|2.| Calculates user's age in Venus years |    |   |
-|3.| Calculates user's age in Mars years |  |  |
-|4.| Calculates user's age in Jupiter years |    |  |
-|5.| Determines how many years a user has left to live on each planet |  |  |
-|6.| If a user has already surpassed the average life expectancy, the application will return the number of years they have lived past the life expectancy |    |  |
+| Behavior  | Input  | Output  |
+|---|---|---|
+|1. Calculates user's age in Mercury years | 2 |  8.34
+|2. Calculates user's age in Venus years | 2 |  3.22
+|3. Calculates user's age in Mars years | 2 | 1.06
+|4. Calculates user's age in Jupiter years | 2 | .0168
+|5. Determines how many years a user has left to live on each planet |  |
+|6. If a user has already surpassed the average life expectancy, the application will return the number of years they have lived past the life expectancy |    |  
 
 ## Setup/Installation Requirements
 
