@@ -129,4 +129,24 @@ describe('AgeCalculator', function() {
 
     expect(ageCalculator.calculateLifeYearRemaining(earthAge, planet)).toEqual(6.55 - (20 * 0.084));
   });
+
+  it('should return the correct life remaining for the person given lifestyle factors', function() {
+    var ageCalculator = new AgeCalculator();
+    var planet = "earth";
+    var earthAge = 20;
+
+    expect(ageCalculator.calculateLifeYearRemaining(earthAge, planet, ["smoke"])).toEqual((78 * 0.80) - earthAge);
+    expect(ageCalculator.calculateLifeYearRemaining(earthAge, planet, ["drink"])).toEqual((78 * 0.90) - earthAge);
+    expect(ageCalculator.calculateLifeYearRemaining(earthAge, planet, ["exercise<3"])).toEqual((78 * 1.05) - earthAge);
+    expect(ageCalculator.calculateLifeYearRemaining(earthAge, planet, ["exercise>3"])).toEqual((78 * 1.20) - earthAge);
+    expect(ageCalculator.calculateLifeYearRemaining(earthAge, planet, ["smoke", "drink", "exercise>3"])).toEqual((78 * 0.80 * 0.90 * 1.20) - earthAge);
+  });
+
+  it('should return the correct number of years the person has lived past their life expectancy on the planet Earth', function() {
+    var ageCalculator = new AgeCalculator();
+    var planet = "earth";
+    var earthAge = 98;
+
+    expect(ageCalculator.calculateLifeYearRemaining(earthAge, planet)).toEqual(78 - earthAge);
+  });
 });
